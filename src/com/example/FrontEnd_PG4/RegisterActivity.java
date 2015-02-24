@@ -6,10 +6,10 @@ import android.os.Bundle;
 /**
  * Created by sai on 2/21/2015.
  */
-public class MyActivity1 extends Activity {
+public class RegisterActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main1);
+        setContentView(R.layout.register);
     }
 }
