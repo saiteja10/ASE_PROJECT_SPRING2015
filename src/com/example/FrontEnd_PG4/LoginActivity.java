@@ -39,7 +39,7 @@ public class LoginActivity extends Activity implements JsonHandler {
         String emailTxt = email.getText().toString();
         String pwdTxt = password.getText().toString();
         if (emailTxt.length() > 0 && pwdTxt.length() > 0) {
-            CheckBox checkBox = (CheckBox)findViewById(R.id.isEmployee);
+            CheckBox checkBox = (CheckBox) findViewById(R.id.isEmployee);
             boolean isEmployee = checkBox.isChecked();
             LoginRequest loginRequest = new LoginRequest(this, this, emailTxt, pwdTxt, isEmployee);
             loginRequest.execute();
@@ -57,8 +57,16 @@ public class LoginActivity extends Activity implements JsonHandler {
         try {
             JSONObject jsonObject = new JSONObject(jsonResult);
             if (jsonObject.getBoolean("success")) {
-                Intent intent = new Intent(this, Dashboard.class);
+                Intent intent;
+                if (jsonObject.getString("type").equalsIgnoreCase("user"))
+                    intent = new Intent(this, Dashboard.class);
+                else if (jsonObject.getString("type").equalsIgnoreCase("employee"))
+                    intent = new Intent(this, EmployeeDashboard.class);
+                else
+                    intent = new Intent(this, AdminDashboard.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
             } else
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_LONG).show();
         } catch (JSONException e) {
