@@ -26,9 +26,9 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText3"
+                android:id="@+id/fname"
                 android:layout_marginRight="5dp"
-                android:layout_above="@+id/editText4" android:layout_alignStart="@+id/editText5"/>
+                android:layout_above="@+id/lname" android:layout_alignStart="@+id/rpwd"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,8 +39,8 @@
         <EditText
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText4"
-                android:layout_below="@+id/textView7" android:layout_alignStart="@+id/editText3"/>
+                android:id="@+id/lname"
+                android:layout_below="@+id/textView7" android:layout_alignStart="@+id/fname"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText5"
+                android:id="@+id/rpwd"
                 android:password="true" android:layout_below="@+id/textView8" android:layout_alignParentEnd="true"/>
         <TextView
                 android:layout_width="wrap_content"
@@ -81,22 +81,22 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editText7"
-                android:layout_alignTop="@+id/textView11" android:layout_alignStart="@+id/editText6"/>
+                android:id="@+id/remail"
+                android:layout_alignTop="@+id/textView11" android:layout_alignStart="@+id/rcpwd"/>
         <EditText
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:ems="10"
                 android:id="@+id/editText8"
-                android:layout_alignTop="@+id/textView12" android:layout_alignStart="@+id/editText7"/>
+                android:layout_alignTop="@+id/textView12" android:layout_alignStart="@+id/remail"/>
         <EditText
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText6"
-                android:layout_below="@+id/textView9" android:layout_alignStart="@+id/editText5"/>
+                android:id="@+id/rcpwd"
+                android:layout_below="@+id/textView9" android:layout_alignStart="@+id/rpwd"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,6 +118,7 @@
                 android:id="@+id/imageButton2"
                 android:layout_marginTop="33dp"
                 android:nestedScrollingEnabled="false" android:src="@drawable/images"
-                android:layout_below="@+id/checkBox2" android:layout_centerHorizontal="true"/>
+                android:layout_below="@+id/checkBox2" android:layout_centerHorizontal="true"
+                android:onClick="onRegister"/>
     </RelativeLayout>
 </LinearLayout>
