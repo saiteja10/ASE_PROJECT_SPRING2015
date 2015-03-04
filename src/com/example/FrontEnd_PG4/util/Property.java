@@ -3,9 +3,7 @@ package com.example.FrontEnd_PG4.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by Gurrala on 2/24/2015.
- */
+
 public class Property {
     private SharedPreferences sharedpreferences;
 

@@ -5,9 +5,7 @@ import com.example.FrontEnd_PG4.util.Property;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
 
-/**
- * Created by Gurrala on 2/24/2015.
- */
+
 public class LoginRequest extends BaseRequest {
     private String email, password;
     private Property property;
